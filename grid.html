@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+
+    <style>
+
+        :root{
+            --theme-background: #e6d2ff;
+            --theme-text: #00767e;
+        }
+
+        .child{
+            border: 3px solid var(--theme-text);
+            background-color: var(--theme-background);
+            padding: 20px;
+            color: var(--theme-text);
+            animation: myanimation 2s linear infinite;
+        }
+
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 200px 600px; */
+            /* grid-template-columns: 1fr 2fr 3fr;   */
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4, 400px);
+            gap: 20px;
+            /* column-gap: 20px; */
+            /* row-gap: 20px; */
+            background-color: red;
+            height: auto;
+        }
+
+        body{
+            background-color: var(--theme-background);
+            margin: 0;
+        }
+
+        .navbar{
+            background-color: var(--theme-background);
+            border: 3px solid var(--theme-text);
+            height: 100px;
+        }
+
+        @keyframes myanimation{
+            0%{
+                transform: translateY(-50px);
+            }
+
+            50%{
+                transform: translateY(50px);
+            }
+
+            100%{
+                transform: translateY(-50px);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, recusandae.</h1>
+        </div>
+        <div class="child">
+            <h1>Child 2</h1>
+        </div>
+        <div class="child">
+            <h1>Child 3</h1>
+        </div>
+
+        <div class="child">
+            <h1>Child 1</h1>
+        </div>
+        <div class="child">
+            <h1>Child 2</h1>
+        </div>
+        <div class="child">
+            <h1>Child 3</h1>
+    </div>
+    
+</body>
+</html>
