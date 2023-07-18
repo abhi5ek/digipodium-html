@@ -9,7 +9,7 @@
 
        <style>
             header{
-                background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.096),black),url("https://img.etimg.com/thumb/msid-99669954,width-7046,height-3963,imgsize-1040534,overlay-economictimes/photo.jpg");
+                background-image: linear-gradient(0deg,rgba(0, 0, 0, 0),black),url("https://img.etimg.com/thumb/msid-99669954,width-7046,height-3963,imgsize-1040534,overlay-economictimes/photo.jpg");
                 background: cover;
                 padding: 25px 0;
                 background-position: center;
@@ -25,6 +25,11 @@
 
             .card .card-body{
                 transform: translateZ(50px);
+            }
+
+            .img-container{
+                height: 300px;
+                overflow: hidden;
             }
        </style>
 
@@ -65,7 +70,10 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img clsss="card-img-top" src="https://www.boat-lifestyle.com/cdn/shop/products/1_5_288x.png?v=1655534211" alt="">
+                    <div class="img-container">
+
+                        <img class="w-100 h-100 d-block m-auto" src="https://media.wired.com/photos/5f52a44bb555bc55dbcdf5a8/master/w_2560%2Cc_limit/Gear-Wireless-Bluetooth-1226031847.jpg" alt="">
+                    </div>
                      <div class="card-body">
                         <p class="fw-bold">boAt</p>
                         <h3>Rockerz 450 pro</h3>
@@ -83,7 +91,10 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img clsss="card-img-top" src="https://www.boat-lifestyle.com/cdn/shop/products/1_5_288x.png?v=1655534211" alt="">
+                    <div class="img-container">
+
+                        <img clsss="h-100 d-block m-auto" src="https://www.boat-lifestyle.com/cdn/shop/products/1_5_288x.png?v=1655534211" alt="">
+                    </div>
                      <div class="card-body">
                         <p class="fw-bold">boAt</p>
                         <h3>Rockerz 450 pro</h3>
