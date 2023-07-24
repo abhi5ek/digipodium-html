@@ -26,3 +26,7 @@ console.log(smartphone.color[2]);
 smartphone.color.push('Red');
 console.log(smartphone); 
 
+
+
+
+
