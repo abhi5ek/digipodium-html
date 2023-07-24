@@ -23,7 +23,7 @@ console.log(movies.slice(1, 4));
 
 console.log(movies.slice(1, -1));  //prints till last element
 
-console.log(movies.slice(2));  //prints till last elemenr
+console.log(movies.slice(2));  //prints till last element
 
 console.log(movies.slice(2 ,100));  //prints till last element
 
