@@ -15,14 +15,14 @@ console.log(disp2);
 // WAP in JS to print all the prime numbers present in an array
 const arr3 = [1,2,3,4,5,6,7,8,9,10];
 console.log(arr3);
-const ans = arr3.filter( (p) => { return getPrime(p)==2});
+const ans = arr3.filter( (p) => { return getPrime(p)==true});
 console.log(ans);
 
 function getPrime(num){
     var cnt=0;
-    for(var i=1;i<=num;i++){
-        if(num>1 && num%i==0)
-        cnt++;
+    for(var i=2;i<=Math.sqrt(num);i++){
+        if(num==1 || num%i==0)
+        return false;
     }
-    return cnt;
+    return true;
 } 
