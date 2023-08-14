@@ -5,79 +5,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nice Interface</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@forta<iwesome class="fa-sharp fa-solid fa-bars fa-flip"></iwesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
         .navbar{
-            background-color: rgba(0, 153, 255, 0.842);
+            background-color: rgba(255, 60, 0, 0.842);
             border-radius: 4px;
             padding: 20px 40px;
-            display: flex;
-            justify-content: center;
+            /* display: flex;
+            justify-content: center; */
         }
         
-        .navbar ul{
+        ul{
             list-style: none;
         }
         
-        .navbar li a{
+        a{
             text-decoration: none;
-            color: white;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-transform: uppercase;
-            font-weight: bold;
+            color:  black;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            /* text-transform: uppercase; */
+            font-weight: 600;
             font-style: italic;
             font-size: 400%;
         }
-        .navbar li a:hover{
+        a:hover{
             color: rgb(255, 0, 128);
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-size: 450%; */
         }
         
-        .navbar li{
+        li{
             /* float: left; */
             margin: 10px 23px;
         }
 
-        body{
-            background-color: rgba(0, 153, 255, 0.842);
+        .bcolor{
+            background-color:  rgba(255, 60, 0, 0.842);
         }
-  
+
+        hr{
+            color: black ;
+            font-size: larger;
+            background-color: rgba(255, 60, 0, 0.842);
+        }
+
     </style>
 
 
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg">
-        <div>
-            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample">
-                <i class="fa-sharp fa-solid fa-bars fa-flip"></i>
-            </button>
-            
-            <div class="collapse" id="collapseExample">
+
+    <div>
+
+        <div class="row">
+
+            <div class="col bcolor">
+                <p style="font-size: 300%; margin: 5px 40px;">
+                    <i class="fa-brands fa-aws"></i>
+                </p>
+            </div>
+
+            <div class="col bcolor" style="display: flex; justify-content: end;">
+                <button style="margin: 20px 60px; font-size: 150%;" class="btn btn-tranparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasWithBackdrop"><i class="fa-sharp fa-solid fa-bars"></i></button>
+            </div>
+
+        </div>
+        
+        <div class="offcanvas offcanvas-top offcanvas-size-xl"  tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div style="background-color: yellow; display: flex; justify-content: center;" class="offcanvas-body">
                 <ul>
-                    <hr>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">about us</a></li>
-                    <li> <a href="#">services</a></li>
-                    <li> <a href="#">contact</a></li>
-                   
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> About </a></li>
+                    <li><a href="#"> Services </a></li>
+                    <li><a href="#"> Contact </a></li>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <hr>
-    <div style="font-weight: bold; color: white;">
-        <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
+        
+        <div class="row" style="font-weight: bold; color: white; height: 600px;  background-color:  rgba(255, 60, 0, 0.842);">
+            <div style=" margin: 10px 20px; margin-right: 10px;">
+                <hr>
+                <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
+            </div>
+        </div>
+        <div class="row" style="font-weight: bold; background-color: white; height: 600px; color:  rgba(255, 60, 0, 0.842);;">
+            <div style="margin: 10px 20px; ">
+                <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
+            </div>
+        </div>
+        <div class="row" style="font-weight: bold; color: white; height: 600px;  background-color:  rgba(255, 60, 0, 0.842);">
+            <div style="margin: 10px 20px; ">
+                <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
+            </div>
+        </div>
+        <div class="row" style="font-weight: bold; background-color: white; height: 600px; color:  rgba(255, 60, 0, 0.842);;">
+            <div style="margin: 10px 20px; ">
+                <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
+            </div>
+        </div>
+        
     </div>
-    <hr>
-    <div style=" font-weight: bold; background-color: white; color: rgba(0, 153, 255, 0.842);">
-        <h3 style="font-size: 400%;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, facere amet neque in vero temporibus obcaecati odit enim aliquid blanditiis ullam perspiciatis itaque aut incidunt assumenda sint ea quas! Eveniet.</h3>
-    </div>
-
-</body>
-
+    </body>
+    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 
