@@ -17,7 +17,7 @@ const Amazon = () => {
 
       </div>
 
-      {/* <div className='row'>
+      {/* { <div className='row'>
          
          <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'black' }}>
 
@@ -25,7 +25,7 @@ const Amazon = () => {
          
          </nav>
 
-      </div> */}
+      </div> } */}
          
     </nav> 
   
