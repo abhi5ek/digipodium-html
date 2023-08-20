@@ -49,6 +49,27 @@ const Signup = () => {
     }
   });
 
+  const uploadfile = async (e) => {
+    const file = e.target.files[0];
+
+    const fd = new FormData();
+    fd.append('myfile',file);
+
+    const res = await fetch('http://localhost:5000/util/uploadfile',{
+      method:'POST',
+      body: fd
+    });
+
+    console.log(res.status);
+
+    if(res.status === 200){
+      console.log('File upload sucessfully')
+    }else{
+      console.log('File upload failed');
+    }
+
+  }
+
   return (
     <div>
       <div className="w-25">
@@ -73,6 +94,8 @@ const Signup = () => {
               <label htmlFor="">Age</label>
               <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.age}</span>
               <input type="number" className="form-control mb-3" name="age" onChange={signupForm.handleChange} value={signupForm.values.age} />
+
+              <input type="file" onChange={uploadfile()}/>
 
               <button disabled={signupForm.isSubmitting} className="btn btn-primary w-100 mt-5">Submit</button>
             </form>

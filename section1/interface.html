@@ -11,30 +11,26 @@
         ul{
             list-style: none;
         }
+
+        .center{
+            display: flex;
+            justify-content: center;
+        }
         
         a{
             text-decoration: none;
             color:  black;
-            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-            /* text-transform: uppercase; */
-            font-weight: 600;
-            font-style: italic;
-            font-size: 400%;
+            line-height: 6rem;
+            font-weight: 400%;
+            font-size: 500%;
         }
         a:hover{
             color: rgb(255, 0, 128);
             font-family: cursive;
-            /* font-size: 450%; */
         }
-
+       
         .bcolor{
             background-color:  rgba(255, 38, 0, 0.849);
-        }
-
-        hr{
-            background-color: white;
-            position: relative;
-            height: 3px;
         }
 
         .nice :hover{
@@ -56,9 +52,10 @@
 
 </head>
 <body>
-        <div>
-            <div class="row">   
-                <div class="bcolor divi">
+    <div>   
+        <nav>
+            <div class="bcolor divi">
+                <div class="row">
                     <ul>
                         <li style="float: left; font-size: 150%;">
                             <i class="fa-brands fa-aws mt-4"></i>
@@ -67,29 +64,59 @@
                             <a class="btn btn-tranparent nice mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasWithBackdrop"><i class="fa-sharp fa-solid fa-bars"></i></a>
                         </li>
                     </ul>
+                    <hr style="color: white;">
                 </div>
+            </div>
+        </nav>
             
+           <div class="offcanvas offcanvas-top offcanvas-size-xl"  tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div style="background-color: rgb(251, 255, 0);" class="row divi">
+                <ul>
+                    <li style="float: left; font-size: 150%;">
+                        <i style="color: black;" class="fa-brands fa-aws mt-4"></i>
+                    </li>
+                    <li style="float: right;">
+                        <a class="btn btn-tranparent nice mt-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasWithBackdrop"><i style="color: black;" class="fa-sharp fa-solid fa-xmark"></i></a>
+                    </li>
+                </ul>
+                <hr>
             </div>
-        
-        <div class="offcanvas offcanvas-top offcanvas-size-xl"  tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div style="background-color: yellow; display: flex; justify-content: center;" class="offcanvas-body">
-               <div class="divi">
+           
+              <div style="background-color: rgb(251, 255, 0);">
+                <div class="divi">
                    <ul>
-                       <li><a href="#"> Home </a></li>
-                       <li><a href="#"> About </a></li>
-                       <li><a href="#"> Services </a></li>
-                       <li><a href="#"> Contact </a></li>
+                      <div>
+                          <li class="center"><a href="#"> Purpose </a></li>
+                      </div>
+                      <div>
+                          <li class="center"><a href="#"> Location </a></li>
+                      </div>
+                      <div>
+                          <li class="center"><a href="#"> Schedule </a></li>
+                      </div>
+                      <div>
+                          <li class="center"><a href="#"> Apply </a></li>
+                      </div>
+                      <div>
+                          <li class="center"><a href="#"> Contact </a></li>
+                      </div>
                     </ul>
-                </div>
-            </div>
-        </div>
+                 </div>
+              </div>
+              <div style="background-color: rgb(251, 255, 0);" class="row divi">
+                    <div style="display: flex; justify-content: left;" class="col md-6">
+                       <h6>SOUTH BAY MADE <br>SINCE'96 </h6>
+                    </div>
+                    <div style="display: flex; justify-content: right;" class="col md-6 mb-4">
+                       <h6> <i style=" font-size: 80%; color: rgba(255, 38, 0, 0.849)" class="fa-sharp fa-solid fa-circle fa-beat-fade"></i> APPLICATION NOW  <br> CLOSED </h6>
+                    </div>
+              </div>
+             </div>
     </div>
     <div>
         
-        
         <div class="row" style="color: white; background-color:  rgba(255, 38, 0, 0.849);">
             <div class="divi">
-                <hr>
                 <p style="font-size: 1100%; line-height: 10rem;">Baunfire <br>Portfolio Review</p> 
                 <p style="font-size: 1100%; line-height: 10rem; color: yellow; display: flex; justify-content: right; font-family: cursive; ">Summer'23 </p>
                 <br>
