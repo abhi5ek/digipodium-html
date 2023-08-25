@@ -1,11 +1,13 @@
 import { useFormik } from 'formik';
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Signup = () => {
 
   const navigate = useNavigate();
+
+  const [selImg, setSelImage ] = useState();
 
   const signupForm = useFormik({
     initialValues: {
@@ -15,6 +17,8 @@ const Signup = () => {
       age : ""
     },
     onSubmit : async ( values,{ resetForm, setSubmitting } ) => {
+
+      values.avatar = selImg;
       console.log(values);
       setSubmitting(true);
 
@@ -50,7 +54,9 @@ const Signup = () => {
   });
 
   const uploadfile = async (e) => {
+    if(!e.target.files[0]) return;
     const file = e.target.files[0];
+    setSelImage(file.name);
 
     const fd = new FormData();
     fd.append('myfile',file);
@@ -95,7 +101,7 @@ const Signup = () => {
               <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.age}</span>
               <input type="number" className="form-control mb-3" name="age" onChange={signupForm.handleChange} value={signupForm.values.age} />
 
-              <input type="file" onChange={uploadfile()}/>
+              <input type="file" onChange={uploadfile}/>
 
               <button disabled={signupForm.isSubmitting} className="btn btn-primary w-100 mt-5">Submit</button>
             </form>
