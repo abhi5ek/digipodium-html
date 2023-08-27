@@ -17,6 +17,7 @@ const port = 5000;
 //middleware
 
 app.use(express.json());
+app.use(express.static('./uploads'))
 
 app.use(cors({
     origin: [ 'http://localhost:3000']
