@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -42,9 +42,9 @@ const Signup = () => {
         navigate('/login');
       }else{
         Swal.fire({
-          icon : 'success',
-          title : 'WellDone!',
-          text : 'Registered Successfully'
+          icon : 'error',
+          title : 'Oops!',
+          text : 'Something went wrong'
         })
       }
 
@@ -86,7 +86,7 @@ const Signup = () => {
 
             <form onSubmit={signupForm.handleSubmit}>
               <label htmlFor="">Name</label>
-              {/* <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.name}</span> */}
+              <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.name}</span>
               <input type="text" className="form-control mb-3" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
               
               <label htmlFor="">Email Address</label>
