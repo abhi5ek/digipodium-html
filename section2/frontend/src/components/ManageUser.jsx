@@ -16,14 +16,25 @@ const ManageUser = () => {
   };
 
   const deleteUser = async (id) => {
-    const res = await fetch('http://localhost:5000/user/delete/'+id,{method:'DELETE'});
-    console.log(res.status);
-    const data = await res.json();
-    if(res.status===200){
-      fetchUserData();
-      toast.success(data.name+ ' Deleted Successfully 😎🍔')
+    // const res = await fetch('http://localhost:5000/user/delete/'+id,{method:'DELETE'});
+    // console.log(res.status);
+    // const data = await res.json();
+    // if(res.status===200){
+    //   fetchUserData();
+    //   toast.success(data.name+ ' Deleted Successfully 😎🍔')
+    // }
+   toast.promise(
+    fetch('http://localhost:5000/user/delete/'+id,{method:'DELETE'}),
+    {
+      loading: 'Deleting...',
+      success: () => {
+        fetchUserData();
+        return <b>User Deleted</b>;
+      },
+      error: <b>Could not delete</b>
     }
-  }
+   );
+  };
 
   useEffect( () => {
     fetchUserData();

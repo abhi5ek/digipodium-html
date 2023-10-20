@@ -26,6 +26,8 @@ function App() {
       <Toaster position='top-right' />
        <BrowserRouter>
        <UserProvider>
+
+        
           <Navbar/>
 
           <Routes>  

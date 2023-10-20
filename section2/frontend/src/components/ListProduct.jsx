@@ -67,7 +67,7 @@ const ListProduct = () => {
     }
 
   return (
-    <div className='list_back'>
+    <div className="list_back">
 
         <header className='bg-transparent '>
            <div className='container py-5'>
@@ -132,6 +132,6 @@ const ListProduct = () => {
   )
 }
 
-export default ListProduct
+export default ListProduct;
 
 

@@ -12,7 +12,9 @@
 
 .list_back{
   background-image: url("/public/listing-back.avif");
-  display: flex;
+  object-fit: cover;
+  /* height: 600px; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
